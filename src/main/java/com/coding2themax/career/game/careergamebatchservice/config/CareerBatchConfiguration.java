@@ -1,16 +1,21 @@
 package com.coding2themax.career.game.careergamebatchservice.config;
 
+import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
+import org.springframework.batch.core.configuration.annotation.StepScope;
+import org.springframework.batch.core.job.builder.JobBuilder;
 import org.springframework.batch.core.repository.JobRepository;
 import org.springframework.batch.core.step.builder.StepBuilder;
 import org.springframework.batch.item.file.FlatFileItemReader;
 import org.springframework.batch.item.file.builder.FlatFileItemReaderBuilder;
 import org.springframework.batch.item.file.transform.FixedLengthTokenizer;
 import org.springframework.batch.item.file.transform.Range;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.jdbc.support.JdbcTransactionManager;
 import org.springframework.web.client.RestClient;
@@ -21,7 +26,7 @@ import com.coding2themax.career.game.careergamebatchservice.writer.CategoryWrite
 
 @Configuration
 @EnableBatchProcessing
-public class BatchConfiguration {
+public class CareerBatchConfiguration {
 
   @Value("${data.service.base.url:localhost:12000}")
   private String baseDataService;
@@ -38,12 +43,23 @@ public class BatchConfiguration {
   }
 
   @Bean
-  public FlatFileItemReader<Category> categoryItemReader(
-      @Value("#{jobParameters[inputFile]}:/category.txt") Resource resource) {
+  @StepScope
+  public Resource categoryFile(@Value("#{jobParameters[inputFile]}") String catFile) {
 
-    return new FlatFileItemReaderBuilder<Category>().resource(resource).lineTokenizer(fixedLengthTokenizer())
+    return new ClassPathResource(catFile);
+
+  }
+
+  @Bean
+  @StepScope
+  public FlatFileItemReader<Category> categoryItemReader() {
+
+    return new FlatFileItemReaderBuilder<Category>()
+        .resource(new ClassPathResource("category.txt"))
+        .lineTokenizer(fixedLengthTokenizer())
         .linesToSkip(1)
-        .targetType(Category.class).build();
+        .targetType(Category.class)
+        .build();
 
   }
 
@@ -73,4 +89,9 @@ public class BatchConfiguration {
         .build();
   }
 
+  @Bean
+  public Job job(JobRepository jobRepository, Step categoryLoad) {
+
+    return new JobBuilder("careerJob", jobRepository).start(categoryLoad).build();
+  }
 }

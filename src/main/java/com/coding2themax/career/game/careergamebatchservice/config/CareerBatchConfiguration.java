@@ -1,35 +1,29 @@
 package com.coding2themax.career.game.careergamebatchservice.config;
 
+import javax.sql.DataSource;
+
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
-import org.springframework.batch.core.configuration.annotation.StepScope;
 import org.springframework.batch.core.job.builder.JobBuilder;
 import org.springframework.batch.core.repository.JobRepository;
 import org.springframework.batch.core.step.builder.StepBuilder;
+import org.springframework.batch.item.database.JdbcBatchItemWriter;
+import org.springframework.batch.item.database.builder.JdbcBatchItemWriterBuilder;
 import org.springframework.batch.item.file.FlatFileItemReader;
 import org.springframework.batch.item.file.builder.FlatFileItemReaderBuilder;
 import org.springframework.batch.item.file.transform.FixedLengthTokenizer;
 import org.springframework.batch.item.file.transform.Range;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
-import org.springframework.core.io.Resource;
 import org.springframework.jdbc.support.JdbcTransactionManager;
-import org.springframework.web.client.RestClient;
 
-import com.coding2themax.career.game.careergamebatchservice.dao.WebCategoryDao;
 import com.coding2themax.career.game.careergamebatchservice.model.Category;
-import com.coding2themax.career.game.careergamebatchservice.writer.CategoryWriter;
 
 @Configuration
 @EnableBatchProcessing
 public class CareerBatchConfiguration {
-
-  @Value("${data.service.base.url:localhost:12000}")
-  private String baseDataService;
 
   @Bean
   public FixedLengthTokenizer fixedLengthTokenizer() {
@@ -43,45 +37,33 @@ public class CareerBatchConfiguration {
   }
 
   @Bean
-  @StepScope
-  public Resource categoryFile(@Value("#{jobParameters[inputFile]}") String catFile) {
-
-    return new ClassPathResource(catFile);
-
-  }
-
-  @Bean
-  @StepScope
   public FlatFileItemReader<Category> categoryItemReader() {
 
     return new FlatFileItemReaderBuilder<Category>()
         .resource(new ClassPathResource("category.txt"))
-        .lineTokenizer(fixedLengthTokenizer())
+        .name("cat")
         .linesToSkip(1)
+        .lineTokenizer(fixedLengthTokenizer())
         .targetType(Category.class)
         .build();
 
   }
 
   @Bean
-  public RestClient restClient() {
-    return RestClient.builder().baseUrl(baseDataService).build();
-  }
-
-  @Bean
-  public CategoryWriter categoryWriter(RestClient restClient) {
-    CategoryWriter categoryWriter = new CategoryWriter();
-    WebCategoryDao categoryDao = new WebCategoryDao();
-    categoryDao.setRestClient(restClient);
-    categoryWriter.setCategoryDao(categoryDao);
-    return categoryWriter;
+  public JdbcBatchItemWriter<Category> categoryWriter(DataSource dataSource) {
+    return new JdbcBatchItemWriterBuilder<Category>()
+        .sql(
+            "INSERT INTO categorytext, displaylevel, selectable values(:category_text, :display_level, :selectable, :sort_sequence)")
+        .dataSource(dataSource)
+        .beanMapped()
+        .build();
 
   }
 
   @Bean
   public Step categoryLoad(JobRepository jobRepository, JdbcTransactionManager jdbcTransactionManager,
       FlatFileItemReader<Category> categoryItemReader,
-      CategoryWriter categoryWriter) {
+      JdbcBatchItemWriter<Category> categoryWriter) {
 
     return new StepBuilder("categoryLoad", jobRepository).<Category, Category>chunk(2, jdbcTransactionManager)
         .reader(categoryItemReader)
@@ -90,8 +72,8 @@ public class CareerBatchConfiguration {
   }
 
   @Bean
-  public Job job(JobRepository jobRepository, Step categoryLoad) {
+  public Job job(JobRepository jobRepository, Step categoryLoad, JobCompletionNotificationLister listener) {
 
-    return new JobBuilder("careerJob", jobRepository).start(categoryLoad).build();
+    return new JobBuilder("careerJob", jobRepository).listener(listener).start(categoryLoad).build();
   }
 }

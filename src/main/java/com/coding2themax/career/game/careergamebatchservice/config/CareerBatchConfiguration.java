@@ -12,68 +12,49 @@ import org.springframework.batch.item.database.JdbcBatchItemWriter;
 import org.springframework.batch.item.database.builder.JdbcBatchItemWriterBuilder;
 import org.springframework.batch.item.file.FlatFileItemReader;
 import org.springframework.batch.item.file.builder.FlatFileItemReaderBuilder;
-import org.springframework.batch.item.file.transform.FixedLengthTokenizer;
-import org.springframework.batch.item.file.transform.Range;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
-import org.springframework.jdbc.support.JdbcTransactionManager;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 
-import com.coding2themax.career.game.careergamebatchservice.model.Category;
+import com.coding2themax.career.game.careergamebatchservice.model.USState;
 
 @Configuration
-@EnableBatchProcessing
 public class CareerBatchConfiguration {
-
   @Bean
-  public FixedLengthTokenizer fixedLengthTokenizer() {
+  public FlatFileItemReader<USState> stateReader() {
 
-    FixedLengthTokenizer tokenizer = new FixedLengthTokenizer();
-    tokenizer.setNames("category_code", "category_text", "display_level", "selectable", "sort_sequence");
-    tokenizer.setColumns(new Range(1, 2), new Range(3, 203), new Range(204, 205), new Range(205, 205),
-        new Range(206, 212));
-
-    return tokenizer;
-  }
-
-  @Bean
-  public FlatFileItemReader<Category> categoryItemReader() {
-
-    return new FlatFileItemReaderBuilder<Category>()
-        .resource(new ClassPathResource("category.txt"))
-        .name("cat")
-        .linesToSkip(1)
-        .lineTokenizer(fixedLengthTokenizer())
-        .targetType(Category.class)
+    return new FlatFileItemReaderBuilder<USState>().name(
+        "personItemReader").resource(new ClassPathResource("state.csv"))
+        .delimited()
+        .names("id", "fullname")
+        .targetType(USState.class)
         .build();
 
   }
 
   @Bean
-  public JdbcBatchItemWriter<Category> categoryWriter(DataSource dataSource) {
-    return new JdbcBatchItemWriterBuilder<Category>()
-        .sql(
-            "INSERT INTO categorytext, displaylevel, selectable values(:category_text, :display_level, :selectable, :sort_sequence)")
+  public JdbcBatchItemWriter<USState> writer(DataSource dataSource) {
+    return new JdbcBatchItemWriterBuilder<USState>()
+        .sql("INSERT INTO usstate (id, fullname) VALUES (:id, :fullname)")
         .dataSource(dataSource)
         .beanMapped()
         .build();
+  }
+
+  @Bean
+  public Job importUserJob(JobRepository jobRepository, Step step1, JobCompletionNotificationLister listener) {
+    return new JobBuilder("importUserJob", jobRepository).listener(listener).start(step1).build();
 
   }
 
   @Bean
-  public Step categoryLoad(JobRepository jobRepository, JdbcTransactionManager jdbcTransactionManager,
-      FlatFileItemReader<Category> categoryItemReader,
-      JdbcBatchItemWriter<Category> categoryWriter) {
-
-    return new StepBuilder("categoryLoad", jobRepository).<Category, Category>chunk(2, jdbcTransactionManager)
-        .reader(categoryItemReader)
-        .writer(categoryWriter)
+  public Step step1(JobRepository jobRepository, DataSourceTransactionManager transactionManager,
+      FlatFileItemReader<USState> stateReader, JdbcBatchItemWriter<USState> writer) {
+    return new StepBuilder("step1", jobRepository)
+        .<USState, USState>chunk(3, transactionManager)
+        .reader(stateReader)
+        .writer(writer)
         .build();
-  }
-
-  @Bean
-  public Job job(JobRepository jobRepository, Step categoryLoad, JobCompletionNotificationLister listener) {
-
-    return new JobBuilder("careerJob", jobRepository).listener(listener).start(categoryLoad).build();
   }
 }

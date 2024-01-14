@@ -10,6 +10,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 
 import com.coding2themax.career.game.careergamebatchservice.model.Category;
+import com.coding2themax.career.game.careergamebatchservice.model.USState;
 
 @Component
 public class JobCompletionNotificationLister implements JobExecutionListener {
@@ -26,9 +27,10 @@ public class JobCompletionNotificationLister implements JobExecutionListener {
   public void afterJob(JobExecution jobExecution) {
     if (jobExecution.getStatus() == BatchStatus.COMPLETED) {
       LOG.info("Job finished");
+
       jdbcTemplate
-          .query("SELECT id, fullname FROM catgory", new DataClassRowMapper<>(Category.class))
-          .forEach(Category -> LOG.info("Found <{{}}> in the database.", Category));
+          .query("SELECT id, fullname FROM usstate", new DataClassRowMapper<>(USState.class))
+          .forEach(USState -> LOG.info("Found <{{}}> in the database.", USState));
     }
   }
 

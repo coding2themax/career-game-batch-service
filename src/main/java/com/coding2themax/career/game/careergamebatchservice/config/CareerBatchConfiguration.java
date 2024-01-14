@@ -1,60 +1,75 @@
 package com.coding2themax.career.game.careergamebatchservice.config;
 
-import javax.sql.DataSource;
-
-import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
-import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
-import org.springframework.batch.core.job.builder.JobBuilder;
 import org.springframework.batch.core.repository.JobRepository;
 import org.springframework.batch.core.step.builder.StepBuilder;
-import org.springframework.batch.item.database.JdbcBatchItemWriter;
-import org.springframework.batch.item.database.builder.JdbcBatchItemWriterBuilder;
 import org.springframework.batch.item.file.FlatFileItemReader;
 import org.springframework.batch.item.file.builder.FlatFileItemReaderBuilder;
+import org.springframework.batch.item.file.transform.FixedLengthTokenizer;
+import org.springframework.batch.item.file.transform.Range;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
-import org.springframework.jdbc.datasource.DataSourceTransactionManager;
+import org.springframework.core.io.Resource;
+import org.springframework.jdbc.support.JdbcTransactionManager;
+import org.springframework.web.client.RestClient;
 
-import com.coding2themax.career.game.careergamebatchservice.model.USState;
+import com.coding2themax.career.game.careergamebatchservice.dao.CategoryDAOWeb;
+import com.coding2themax.career.game.careergamebatchservice.model.Category;
+import com.coding2themax.career.game.careergamebatchservice.writer.CategoryWriter;
 
 @Configuration
 public class CareerBatchConfiguration {
-  @Bean
-  public FlatFileItemReader<USState> stateReader() {
 
-    return new FlatFileItemReaderBuilder<USState>().name(
-        "personItemReader").resource(new ClassPathResource("state.csv"))
-        .delimited()
-        .names("id", "fullname")
-        .targetType(USState.class)
-        .build();
+  @Value("${data.service.base.url:localhost:12000}")
+  private String baseDataService;
+
+  @Bean
+  public FixedLengthTokenizer fixedLengthTokenizer() {
+
+    FixedLengthTokenizer tokenizer = new FixedLengthTokenizer();
+    tokenizer.setNames("category_code", "category_text", "display_level", "selectable", "sort_sequence");
+    tokenizer.setColumns(new Range(1, 2), new Range(3, 203), new Range(204, 205), new Range(205, 205),
+        new Range(206, 212));
+
+    return tokenizer;
+  }
+
+  @Bean
+  public FlatFileItemReader<Category> categoryItemReader(FixedLengthTokenizer tokenizer) {
+
+    return new FlatFileItemReaderBuilder<Category>().resource(new ClassPathResource("category.txt"))
+        .name("categoryItemReader")
+        .lineTokenizer(tokenizer)
+        .linesToSkip(1)
+        .targetType(Category.class).build();
 
   }
 
   @Bean
-  public JdbcBatchItemWriter<USState> writer(DataSource dataSource) {
-    return new JdbcBatchItemWriterBuilder<USState>()
-        .sql("INSERT INTO usstate (id, fullname) VALUES (:id, :fullname)")
-        .dataSource(dataSource)
-        .beanMapped()
-        .build();
+  public RestClient restClient() {
+    return RestClient.builder().baseUrl(baseDataService).build();
   }
 
   @Bean
-  public Job importUserJob(JobRepository jobRepository, Step step1, JobCompletionNotificationLister listener) {
-    return new JobBuilder("importUserJob", jobRepository).listener(listener).start(step1).build();
+  public CategoryWriter categoryWriter(RestClient restClient) {
+    CategoryWriter categoryWriter = new CategoryWriter();
+    CategoryDAOWeb categoryDao = new CategoryDAOWeb();
+    categoryDao.setRestClient(restClient);
+    categoryWriter.setCategoryDao(categoryDao);
+    return categoryWriter;
 
   }
 
   @Bean
-  public Step step1(JobRepository jobRepository, DataSourceTransactionManager transactionManager,
-      FlatFileItemReader<USState> stateReader, JdbcBatchItemWriter<USState> writer) {
-    return new StepBuilder("step1", jobRepository)
-        .<USState, USState>chunk(3, transactionManager)
-        .reader(stateReader)
-        .writer(writer)
+  public Step categoryLoad(JobRepository jobRepository, JdbcTransactionManager jdbcTransactionManager,
+      FlatFileItemReader<Category> categoryItemReader,
+      CategoryWriter categoryWriter) {
+
+    return new StepBuilder("categoryLoad", jobRepository).<Category, Category>chunk(2, jdbcTransactionManager)
+        .reader(categoryItemReader)
+        .writer(categoryWriter)
         .build();
   }
 }

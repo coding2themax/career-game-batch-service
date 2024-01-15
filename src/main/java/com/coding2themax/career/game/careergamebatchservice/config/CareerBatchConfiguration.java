@@ -1,6 +1,8 @@
 package com.coding2themax.career.game.careergamebatchservice.config;
 
+import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
+import org.springframework.batch.core.job.builder.JobBuilder;
 import org.springframework.batch.core.repository.JobRepository;
 import org.springframework.batch.core.step.builder.StepBuilder;
 import org.springframework.batch.item.file.FlatFileItemReader;
@@ -13,6 +15,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.jdbc.support.JdbcTransactionManager;
+import org.springframework.lang.NonNull;
 import org.springframework.web.client.RestClient;
 
 import com.coding2themax.career.game.careergamebatchservice.dao.CategoryDAOWeb;
@@ -37,7 +40,7 @@ public class CareerBatchConfiguration {
   }
 
   @Bean
-  public FlatFileItemReader<Category> categoryItemReader(FixedLengthTokenizer tokenizer) {
+  public FlatFileItemReader<Category> categoryItemReader(@NonNull FixedLengthTokenizer tokenizer) {
 
     return new FlatFileItemReaderBuilder<Category>().resource(new ClassPathResource("category.txt"))
         .name("categoryItemReader")
@@ -63,13 +66,22 @@ public class CareerBatchConfiguration {
   }
 
   @Bean
-  public Step categoryLoad(JobRepository jobRepository, JdbcTransactionManager jdbcTransactionManager,
+  public Job importCategoryJob(JobRepository jobRepository, Step step1, JobCompletionNotificationLister listener) {
+    return new JobBuilder("categoryJob", jobRepository)
+        .listener(listener)
+        .start(step1)
+        .build();
+  }
+
+  @Bean
+  public Step step1(JobRepository jobRepository, JdbcTransactionManager jdbcTransactionManager,
       FlatFileItemReader<Category> categoryItemReader,
       CategoryWriter categoryWriter) {
 
-    return new StepBuilder("categoryLoad", jobRepository).<Category, Category>chunk(2, jdbcTransactionManager)
+    return new StepBuilder("step1", jobRepository).<Category, Category>chunk(2, jdbcTransactionManager)
         .reader(categoryItemReader)
         .writer(categoryWriter)
         .build();
   }
+
 }

@@ -13,7 +13,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
-import org.springframework.core.io.Resource;
 import org.springframework.jdbc.support.JdbcTransactionManager;
 import org.springframework.lang.NonNull;
 import org.springframework.web.client.RestClient;
@@ -33,16 +32,15 @@ public class CareerBatchConfiguration {
 
     FixedLengthTokenizer tokenizer = new FixedLengthTokenizer();
     tokenizer.setNames("category_code", "category_text", "display_level", "selectable", "sort_sequence");
-    tokenizer.setColumns(new Range(1, 2), new Range(3, 203), new Range(204, 205), new Range(205, 205),
-        new Range(206, 212));
-
+    tokenizer.setColumns(new Range(1, 3), new Range(4, 204), new Range(205, 206), new Range(207, 207),
+        new Range(208, 212));
     return tokenizer;
   }
 
   @Bean
   public FlatFileItemReader<Category> categoryItemReader(@NonNull FixedLengthTokenizer tokenizer) {
 
-    return new FlatFileItemReaderBuilder<Category>().resource(new ClassPathResource("category.txt"))
+    return new FlatFileItemReaderBuilder<Category>().resource(new ClassPathResource("category.dat"))
         .name("categoryItemReader")
         .lineTokenizer(tokenizer)
         .linesToSkip(1)

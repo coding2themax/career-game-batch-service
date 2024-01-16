@@ -29,8 +29,8 @@ public class JobCompletionNotificationLister implements JobExecutionListener {
       LOG.info("Job finished");
 
       jdbcTemplate
-          .query("SELECT id, fullname FROM usstate", new DataClassRowMapper<>(USState.class))
-          .forEach(USState -> LOG.info("Found <{{}}> in the database.", USState));
+          .query("SELECT code, fullname FROM category", new DataClassRowMapper<>(Category.class))
+          .forEach(Category -> LOG.info("Found <{{}}> in the database.", Category));
     }
   }
 

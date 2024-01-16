@@ -24,7 +24,7 @@ import com.coding2themax.career.game.careergamebatchservice.writer.CategoryWrite
 @Configuration
 public class CareerBatchConfiguration {
 
-  @Value("${data.service.base.url:localhost:12000}")
+  @Value("${data.service.base.url:localhost:12000/category}")
   private String baseDataService;
 
   @Bean

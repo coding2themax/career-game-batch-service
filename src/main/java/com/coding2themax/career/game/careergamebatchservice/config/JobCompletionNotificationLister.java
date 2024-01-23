@@ -5,12 +5,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.batch.core.BatchStatus;
 import org.springframework.batch.core.JobExecution;
 import org.springframework.batch.core.JobExecutionListener;
-import org.springframework.jdbc.core.DataClassRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
-
-import com.coding2themax.career.game.careergamebatchservice.model.Category;
-import com.coding2themax.career.game.careergamebatchservice.model.USState;
 
 @Component
 public class JobCompletionNotificationLister implements JobExecutionListener {
@@ -28,9 +24,6 @@ public class JobCompletionNotificationLister implements JobExecutionListener {
     if (jobExecution.getStatus() == BatchStatus.COMPLETED) {
       LOG.info("Job finished");
 
-      jdbcTemplate
-          .query("SELECT code, fullname FROM category", new DataClassRowMapper<>(Category.class))
-          .forEach(Category -> LOG.info("Found <{{}}> in the database.", Category));
     }
   }
 

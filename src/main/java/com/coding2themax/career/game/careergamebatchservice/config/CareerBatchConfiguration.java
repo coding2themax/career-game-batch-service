@@ -17,8 +17,8 @@ import org.springframework.jdbc.support.JdbcTransactionManager;
 import org.springframework.lang.NonNull;
 import org.springframework.web.client.RestClient;
 
-import com.coding2themax.career.game.careergamebatchservice.dao.CategoryDAOWeb;
 import com.coding2themax.career.game.careergamebatchservice.model.Category;
+import com.coding2themax.career.game.careergamebatchservice.service.CategoryService;
 import com.coding2themax.career.game.careergamebatchservice.writer.CategoryWriter;
 
 @Configuration
@@ -54,11 +54,8 @@ public class CareerBatchConfiguration {
   }
 
   @Bean
-  public CategoryWriter categoryWriter(RestClient restClient) {
-    CategoryWriter categoryWriter = new CategoryWriter();
-    CategoryDAOWeb categoryDao = new CategoryDAOWeb();
-    categoryDao.setRestClient(restClient);
-    categoryWriter.setCategoryDao(categoryDao);
+  public CategoryWriter categoryWriter(RestClient restClient, CategoryService service) {
+    CategoryWriter categoryWriter = new CategoryWriter(service);
     return categoryWriter;
 
   }
@@ -79,6 +76,7 @@ public class CareerBatchConfiguration {
     return new StepBuilder("step1", jobRepository).<Category, Category>chunk(2, jdbcTransactionManager)
         .reader(categoryItemReader)
         .writer(categoryWriter)
+        .allowStartIfComplete(true)
         .build();
   }
 

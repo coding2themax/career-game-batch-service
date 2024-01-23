@@ -6,22 +6,29 @@ import org.springframework.batch.item.Chunk;
 import org.springframework.batch.item.ItemWriter;
 import org.springframework.lang.NonNull;
 
-import com.coding2themax.career.game.careergamebatchservice.dao.CategoryDao;
+import com.coding2themax.career.game.careergamebatchservice.dto.CategoryDTO;
 import com.coding2themax.career.game.careergamebatchservice.model.Category;
+import com.coding2themax.career.game.careergamebatchservice.service.CategoryService;
 
 public class CategoryWriter implements ItemWriter<Category> {
-  private CategoryDao categoryDao;
   private static final Logger LOG = LoggerFactory.getLogger(CategoryWriter.class);
+
+  private CategoryService service;
+
+  public CategoryWriter(CategoryService service) {
+    this.service = service;
+  }
 
   @Override
   public void write(@NonNull Chunk<? extends Category> categories) throws Exception {
     for (Category category : categories) {
-      LOG.info("saving category {}", category);
-      categoryDao.saveCategory(category);
+
+      CategoryDTO dto = new CategoryDTO(category.category_text(), Integer.parseInt(category.display_level().trim()),
+          category.selectable());
+      LOG.info("saving category {}", dto);
+
+      service.saveCategory(dto);
     }
   }
 
-  public void setCategoryDao(CategoryDao categoryDao) {
-    this.categoryDao = categoryDao;
-  }
 }

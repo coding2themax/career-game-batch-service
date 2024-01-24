@@ -1,0 +1,50 @@
+category_code	category_text	display_level	selectable	sort_sequence
+001	Low postures	0	T	23
+010	Specific vocational preparation	0	T	45
+012	Credentials	0	T	46
+013	Prior work experience	0	T	47
+014	On-the-job training	0	T	48
+015	Choice of sitting or standing	0	T	24
+016	Reaching overhead	0	T	25
+018	Reaching at or below the shoulder	0	T	26
+020	Keyboarding	0	T	27
+024	Lifting or carrying	0	T	28
+029	Pushing or pulling with hands or arms	0	T	29
+030	Pushing or pulling with feet or legs	0	T	30
+031	Driving	0	T	31
+032	Foot or leg controls	0	T	32
+034	Gross manipulation	0	T	33
+036	Fine manipulation	0	T	34
+038	Climbing structure-related ramps or stairs	0	T	35
+039	Climbing work-related ramps or stairs	0	T	36
+040	Climbing ladders, ropes, or scaffolds	0	T	37
+043	Extreme cold	0	T	13
+044	Extreme heat	0	T	14
+045	Wetness	0	T	15
+046	Humidity	0	T	16
+047	Heavy vibrations	0	T	17
+050	Heights	0	T	18
+051	Proximity to moving mechanical parts	0	T	19
+052	Vision	0	T	38
+055	Speaking	0	T	39
+056	Noise intensity level	0	T	20
+059	Hearing requirements	0	T	40
+065	Outdoors	0	T	21
+068	Strength	0	T	41
+073	Minimum education level	0	T	49
+077	Standing	0	T	42
+078	Sitting	0	T	43
+079	Maximum weight lifted or carried	0	T	44
+081	Hazardous contaminants	0	T	22
+086	Pace: Pause control	0	T	1
+087	Personal contacts: Verbal interactions	0	T	2
+088	Personal contacts: People skills	0	T	3
+089	Problem solving	0	T	4
+090	Interaction with general public	0	T	5
+091	Working around crowds	0	T	6
+092	Telework	0	T	7
+095	Work review: Supervising others	0	T	8
+096	Work review: Frequency of work being checked	0	T	9
+097	Work review: Presence of supervisor	0	T	10
+098	Pace: Control of workload	0	T	11
+099	Pace: Work pace	0	T	12

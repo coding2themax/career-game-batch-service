@@ -1,0 +1,450 @@
+occupation_code	soc_code	occupation_text	display_level	selectable	sort_sequence
+000	000000	All workers	0	T	1
+00A	111011	Chief executives	1	T	3
+00D	112011	Advertising and promotions managers	1	T	6
+00J	113031	Financial managers	1	T	14
+00K	113051	Industrial production managers	1	T	15
+00M	113071	Transportation, storage, and distribution managers	1	T	17
+00V	119039	Education administrators, all other	1	T	26
+00W	119041	Architectural and engineering managers	1	T	27
+01E	119121	Natural sciences managers	1	T	33
+01J	119199	Managers, all other	1	T	40
+01O	131031	Claims adjusters, examiners, and investigators	1	T	46
+01Q	131041	Compliance officers	1	T	48
+01V	131081	Logisticians	1	T	53
+02E	131199	Business operations specialists, all other	1	T	61
+02F	132011	Accountants and auditors	1	T	62
+02O	111021	General and operations managers	1	T	4
+02Q	112021	Marketing managers	1	T	7
+02R	132099	Financial specialists, all other	1	T	76
+02S	112022	Sales managers	1	T	8
+02U	112032	Public relations managers	1	T	9
+02W	113012	Administrative services managers	1	T	11
+02X	113013	Facilities managers	1	T	12
+02Y	113021	Computer and information systems managers	1	T	13
+02Z	113061	Purchasing managers	1	T	16
+03C	113111	Compensation and benefits managers	1	T	18
+03E	113121	Human resources managers	1	T	19
+03F	113131	Training and development managers	1	T	20
+03H	119021	Construction managers	1	T	22
+03I	119031	Education and childcare administrators, preschool and daycare	1	T	23
+03J	119032	Education administrators, kindergarten through secondary	1	T	24
+03L	119033	Education administrators, postsecondary	1	T	25
+03M	119051	Food service managers	1	T	28
+03N	119071	Gambling managers	1	T	29
+03O	119072	Entertainment and recreation managers, except gambling	1	T	30
+03P	119081	Lodging managers	1	T	31
+03R	119111	Medical and health services managers	1	T	32
+03T	119141	Property, real estate, and community association managers	1	T	35
+03U	119151	Social and community service managers	1	T	36
+03V	172051	Civil engineers	1	T	108
+03W	119161	Emergency management directors	1	T	37
+03Y	172072	Electronics engineers, except computer	1	T	111
+03Z	172081	Environmental engineers	1	T	112
+04C	172111	Health and safety engineers, except mining safety engineers and inspectors	1	T	113
+04D	172112	Industrial engineers	1	T	114
+04G	172141	Mechanical engineers	1	T	117
+04J	131022	Wholesale and retail buyers, except farm products	1	T	44
+04L	173011	Architectural and civil drafters	1	T	122
+04N	131023	Purchasing agents, except wholesale, retail, and farm products	1	T	45
+04O	131032	Insurance appraisers, auto damage	1	T	47
+04P	131051	Cost estimators	1	T	49
+04Q	131071	Human resources specialists	1	T	50
+04R	173023	Electrical and electronic engineering technologists and technicians	1	T	128
+04S	173024	Electro-mechanical and mechatronics technologists and technicians	1	T	129
+04W	173029	Engineering technologists and technicians, except drafters, all other	1	T	134
+04X	173031	Surveying and mapping technicians	1	T	135
+04Y	131082	Project management specialists	1	T	54
+04Z	131111	Management analysts	1	T	55
+05C	131121	Meeting, convention, and event planners	1	T	56
+05E	131131	Fundraisers	1	T	57
+05F	131141	Compensation, benefits, and job analysis specialists	1	T	58
+05G	131151	Training and development specialists	1	T	59
+05J	131161	Market research analysts and marketing specialists	1	T	60
+05L	132023	Appraisers and assessors of real estate	1	T	64
+05M	132031	Budget analysts	1	T	65
+05O	132051	Financial and investment analysts	1	T	67
+05P	132052	Personal financial advisors	1	T	68
+05Q	132053	Insurance underwriters	1	T	69
+05S	192041	Environmental scientists and specialists, including health	1	T	154
+05U	132072	Loan officers	1	T	73
+05X	132081	Tax examiners and collectors, and revenue agents	1	T	74
+06D	151211	Computer systems analysts	1	T	78
+06E	151212	Information security analysts	1	T	79
+06H	151231	Computer network support specialists	1	T	81
+06I	151232	Computer user support specialists	1	T	82
+06L	151241	Computer network architects	1	T	83
+06M	151242	Database administrators	1	T	84
+06R	151244	Network and computer systems administrators	1	T	86
+06S	151251	Computer programmers	1	T	87
+06T	194099	Life, physical, and social science technicians, all other	1	T	182
+06U	151252	Software developers	1	T	88
+06V	151253	Software quality assurance analysts and testers	1	T	89
+06W	151254	Web developers	1	T	90
+06Y	151299	Computer occupations, all other	1	T	92
+07D	152031	Operations research analysts	1	T	95
+07E	152051	Data scientists	1	T	97
+07O	172071	Electrical engineers	1	T	110
+07R	172161	Nuclear engineers	1	T	119
+07T	173013	Mechanical drafters	1	T	124
+07W	173022	Civil engineering technologists and technicians	1	T	127
+07X	173025	Environmental engineering technologists and technicians	1	T	130
+07Y	173026	Industrial engineering technologists and technicians	1	T	131
+08D	191012	Food scientists and technologists	1	T	138
+08J	191041	Epidemiologists	1	T	146
+08N	192012	Physicists	1	T	150
+08P	192031	Chemists	1	T	152
+08V	193033	Clinical and counseling psychologists	1	T	161
+08W	193034	School psychologists	1	T	162
+08Y	193051	Urban and regional planners	1	T	165
+09F	194013	Food science technicians	1	T	172
+09G	194021	Biological technicians	1	T	173
+09N	195011	Occupational health and safety specialists	1	T	183
+09O	195012	Occupational health and safety technicians	1	T	184
+09P	211011	Substance abuse and behavioral disorder counselors	1	T	186
+09Q	211012	Educational, guidance, and career counselors and advisors	1	T	187
+09S	211014	Mental health counselors	1	T	189
+09T	211015	Rehabilitation counselors	1	T	190
+09V	211021	Child, family, and school social workers	1	T	192
+09W	211022	Healthcare social workers	1	T	193
+09X	211023	Mental health and substance abuse social workers	1	T	194
+09Z	211029	Social workers, all other	1	T	195
+10C	211091	Health education specialists	1	T	196
+10D	253099	Teachers and instructors, all other	1	T	268
+10E	211092	Probation officers and correctional treatment specialists	1	T	197
+10F	211093	Social and human service assistants	1	T	198
+10G	211094	Community health workers	1	T	199
+10H	211099	Community and social service specialists, all other	1	T	200
+10I	212011	Clergy	1	T	201
+10L	259031	Instructional coordinators	1	T	275
+10M	231011	Lawyers	1	T	205
+10R	232011	Paralegals and legal assistants	1	T	210
+10U	251011	Business teachers, postsecondary	1	T	214
+10W	251022	Mathematical science teachers, postsecondary	1	T	216
+11C	251042	Biological science teachers, postsecondary	1	T	220
+11E	272012	Producers and directors	1	T	296
+11F	251051	Atmospheric, earth, marine, and space sciences teachers, postsecondary	1	T	222
+11H	251053	Environmental science teachers, postsecondary	1	T	224
+11I	251054	Physics teachers, postsecondary	1	T	225
+11K	272041	Music directors and composers	1	T	302
+11M	251062	Area, ethnic, and cultural studies teachers, postsecondary	1	T	227
+11N	251063	Economics teachers, postsecondary	1	T	228
+11P	251065	Political science teachers, postsecondary	1	T	230
+11Q	251066	Psychology teachers, postsecondary	1	T	231
+11R	251067	Sociology teachers, postsecondary	1	T	232
+11T	251071	Health specialties teachers, postsecondary	1	T	234
+11V	251072	Nursing instructors and teachers, postsecondary	1	T	235
+11W	251081	Education teachers, postsecondary	1	T	236
+11Y	251111	Criminal justice and law enforcement teachers, postsecondary	1	T	238
+12C	251113	Social work teachers, postsecondary	1	T	240
+12D	251121	Art, drama, and music teachers, postsecondary	1	T	241
+12F	251123	English language and literature teachers, postsecondary	1	T	243
+12K	251193	Recreation and fitness studies teachers, postsecondary	1	T	248
+12L	251194	Career/technical education teachers, postsecondary	1	T	249
+12M	251199	Postsecondary teachers, all other	1	T	250
+12N	252011	Preschool teachers, except special education	1	T	251
+12O	252012	Kindergarten teachers, except special education	1	T	252
+12P	252021	Elementary school teachers, except special education	1	T	253
+12Q	252022	Middle school teachers, except special and career/technical education	1	T	254
+12S	252031	Secondary school teachers, except special and career/technical education	1	T	256
+12T	252032	Career/technical education teachers, secondary school	1	T	257
+12W	252056	Special education teachers, elementary school	1	T	260
+12Y	291071	Physician assistants	1	T	333
+12Z	252057	Special education teachers, middle school	1	T	261
+13B	291122	Occupational therapists	1	T	335
+13C	252058	Special education teachers, secondary school	1	T	262
+13D	253011	Adult basic education, adult secondary education, and english as a second language instructors	1	T	264
+13E	291125	Recreational therapists	1	T	338
+13F	253021	Self-enrichment teachers	1	T	265
+13G	253031	Substitute teachers, short-term	1	T	266
+13H	253041	Tutors	1	T	267
+13I	254011	Archivists	1	T	269
+13J	254012	Curators	1	T	270
+13K	291141	Registered nurses	1	T	344
+13L	254013	Museum technicians and conservators	1	T	271
+13M	254022	Librarians and media collections specialists	1	T	272
+13N	254031	Library technicians	1	T	273
+13Q	292011	Medical and clinical laboratory technologists	1	T	369
+13R	259042	Teaching assistants, preschool, elementary, middle, and secondary school, except special education	1	T	276
+13S	259043	Teaching assistants, special education	1	T	277
+13W	271011	Art directors	1	T	282
+14F	271024	Graphic designers	1	T	290
+14N	272022	Coaches and scouts	1	T	298
+14V	273023	News analysts, reporters, and journalists	1	T	307
+14W	273031	Public relations specialists	1	T	308
+14X	273041	Editors	1	T	309
+14Y	273042	Technical writers	1	T	310
+14Z	273091	Interpreters and translators	1	T	312
+15D	274011	Audio and video technicians	1	T	315
+15E	274012	Broadcast technicians	1	T	316
+15F	274014	Sound engineering technicians	1	T	317
+15M	331021	First-line supervisors of fire fighting and prevention workers	1	T	418
+15O	332011	Firefighters	1	T	421
+15Q	291021	Dentists, general	1	T	325
+15T	333021	Detectives and criminal investigators	1	T	426
+15W	333051	Police and sheriff's patrol officers	1	T	429
+15X	291031	Dietitians and nutritionists	1	T	330
+15Z	291051	Pharmacists	1	T	332
+16B	291081	Podiatrists	1	T	334
+16C	291123	Physical therapists	1	T	336
+16D	291124	Radiation therapists	1	T	337
+16E	291126	Respiratory therapists	1	T	339
+16F	291127	Speech-language pathologists	1	T	340
+16G	339099	Protective service workers, all other	1	T	439
+16H	291128	Exercise physiologists	1	T	341
+16L	291161	Nurse midwives	1	T	346
+16M	291171	Nurse practitioners	1	T	347
+16N	291181	Audiologists	1	T	348
+16T	291215	Family medicine physicians	1	T	353
+16W	291218	Obstetricians and gynecologists	1	T	356
+17I	291292	Dental hygienists	1	T	367
+17K	292012	Medical and clinical laboratory technicians	1	T	370
+17L	292031	Cardiovascular technologists and technicians	1	T	371
+17N	292032	Diagnostic medical sonographers	1	T	372
+17O	292033	Nuclear medicine technologists	1	T	373
+17P	292034	Radiologic technologists and technicians	1	T	374
+17Q	292035	Magnetic resonance imaging technologists	1	T	375
+17S	292042	Emergency medical technicians	1	T	377
+17T	292043	Paramedics	1	T	378
+17V	292052	Pharmacy technicians	1	T	380
+17W	292053	Psychiatric technicians	1	T	381
+17X	292055	Surgical technologists	1	T	382
+17Y	292056	Veterinary technologists and technicians	1	T	383
+18B	292061	Licensed practical and licensed vocational nurses	1	T	385
+18C	292072	Medical records specialists	1	T	386
+18D	292081	Opticians, dispensing	1	T	387
+18F	292092	Hearing aid specialists	1	T	389
+18K	311121	Home health aides	1	T	397
+18L	311122	Personal care aides	1	T	398
+18M	399011	Childcare workers	1	T	498
+18N	311131	Nursing assistants	1	T	399
+18P	311133	Psychiatric aides	1	T	401
+18Q	312011	Occupational therapy assistants	1	T	402
+18S	312021	Physical therapist assistants	1	T	404
+18T	312022	Physical therapist aides	1	T	405
+18V	319091	Dental assistants	1	T	407
+18W	319092	Medical assistants	1	T	408
+18X	319093	Medical equipment preparers	1	T	409
+18Y	319094	Medical transcriptionists	1	T	410
+19C	413031	Securities, commodities, and financial services sales agents	1	T	513
+19D	319097	Phlebotomists	1	T	413
+19F	414011	Sales representatives, wholesale and manufacturing, technical and scientific products	1	T	516
+19G	331011	First-line supervisors of correctional officers	1	T	416
+19H	331012	First-line supervisors of police and detectives	1	T	417
+19I	331091	First-line supervisors of security workers	1	T	419
+19J	331099	First-line supervisors of protective service workers, all other	1	T	420
+19M	333012	Correctional officers and jailers	1	T	425
+19S	339031	Gambling surveillance officers and gambling investigators	1	T	433
+19T	339032	Security guards	1	T	434
+19U	433021	Billing and posting clerks	1	T	532
+19V	339091	Crossing guards and flaggers	1	T	435
+19W	339092	Lifeguards, ski patrol, and other recreational protective service workers	1	T	436
+19Z	351011	Chefs and head cooks	1	T	441
+20B	351012	First-line supervisors of food preparation and serving workers	1	T	442
+20C	352011	Cooks, fast food	1	T	443
+20D	352012	Cooks, institution and cafeteria	1	T	444
+20E	434031	Court, municipal, and license clerks	1	T	541
+20G	434051	Customer service representatives	1	T	543
+20I	352014	Cooks, restaurant	1	T	446
+20J	352015	Cooks, short order	1	T	447
+20L	352021	Food preparation workers	1	T	449
+20M	353011	Bartenders	1	T	450
+20N	353023	Fast food and counter workers	1	T	451
+20O	353031	Waiters and waitresses	1	T	452
+20P	353041	Food servers, nonrestaurant	1	T	453
+20Q	359011	Dining room and cafeteria attendants and bartender helpers	1	T	454
+20R	359021	Dishwashers	1	T	455
+20S	359031	Hosts and hostesses, restaurant, lounge, and coffee shop	1	T	456
+20T	435011	Cargo and freight agents	1	T	556
+20V	371011	First-line supervisors of housekeeping and janitorial workers	1	T	459
+20W	371012	First-line supervisors of landscaping, lawn service, and groundskeeping workers	1	T	460
+20X	372011	Janitors and cleaners, except maids and housekeeping cleaners	1	T	461
+20Y	372012	Maids and housekeeping cleaners	1	T	462
+21C	373011	Landscaping and groundskeeping workers	1	T	465
+21H	391013	First-line supervisors of gambling services workers	1	T	470
+21I	391014	First-line supervisors of entertainment and recreation workers, except gambling services	1	T	471
+21J	391022	First-line supervisors of personal service workers	1	T	472
+21L	392021	Animal caretakers	1	T	474
+21O	439041	Insurance claims and policy processing clerks	1	T	574
+21R	393031	Ushers, lobby attendants, and ticket takers	1	T	479
+21S	393091	Amusement and recreation attendants	1	T	480
+21T	439111	Statistical assistants	1	T	579
+21W	393093	Locker room, coatroom, and dressing room attendants	1	T	482
+22C	394021	Funeral attendants	1	T	486
+22D	394031	Morticians, undertakers, and funeral arrangers	1	T	487
+22F	395012	Hairdressers, hairstylists, and cosmetologists	1	T	489
+22L	471011	First-line supervisors of construction trades and extraction workers	1	T	597
+22P	472031	Carpenters	1	T	601
+22Q	399031	Exercise trainers and group fitness instructors	1	T	499
+22R	399032	Recreation workers	1	T	500
+22S	399041	Residential advisors	1	T	501
+22U	411011	First-line supervisors of retail sales workers	1	T	504
+22V	411012	First-line supervisors of non-retail sales workers	1	T	505
+22W	412011	Cashiers	1	T	506
+22Y	412021	Counter and rental clerks	1	T	508
+22Z	412022	Parts salespersons	1	T	509
+23B	412031	Retail salespersons	1	T	510
+23C	413011	Advertising sales agents	1	T	511
+23D	413021	Insurance sales agents	1	T	512
+23F	413091	Sales representatives of services, except advertising, insurance, financial services, and travel	1	T	515
+23G	414012	Sales representatives, wholesale and manufacturing, except technical and scientific products	1	T	517
+23K	472152	Plumbers, pipefitters, and steamfitters	1	T	621
+23M	419031	Sales engineers	1	T	522
+23Q	431011	First-line supervisors of office and administrative support workers	1	T	527
+23R	432011	Switchboard operators, including answering service	1	T	528
+23U	433011	Bill and account collectors	1	T	531
+23V	433031	Bookkeeping, accounting, and auditing clerks	1	T	533
+23W	433041	Gambling cage workers	1	T	534
+23X	433051	Payroll and timekeeping clerks	1	T	535
+23Y	433061	Procurement clerks	1	T	536
+23Z	433071	Tellers	1	T	537
+24E	434061	Eligibility interviewers, government programs	1	T	544
+24F	434071	File clerks	1	T	545
+24G	434081	Hotel, motel, and resort desk clerks	1	T	546
+24I	434111	Interviewers, except eligibility and loan	1	T	547
+24J	434121	Library assistants, clerical	1	T	548
+24K	434131	Loan interviewers and clerks	1	T	549
+24M	434151	Order clerks	1	T	551
+24N	434161	Human resources assistants, except payroll and timekeeping	1	T	552
+24O	434171	Receptionists and information clerks	1	T	553
+24P	434181	Reservation and transportation ticket agents and travel clerks	1	T	554
+24Q	434199	Information and record clerks, all other	1	T	555
+24S	435031	Public safety telecommunicators	1	T	558
+24T	435032	Dispatchers, except police, fire, and ambulance	1	T	559
+24Z	435061	Production, planning, and expediting clerks	1	T	564
+25B	435071	Shipping, receiving, and inventory clerks	1	T	565
+25C	435111	Weighers, measurers, checkers, and samplers, recordkeeping	1	T	566
+25D	436011	Executive secretaries and executive administrative assistants	1	T	567
+25E	436012	Legal secretaries and administrative assistants	1	T	568
+25F	436013	Medical secretaries and administrative assistants	1	T	569
+25G	436014	Secretaries and administrative assistants, except legal, medical, and executive	1	T	570
+25H	439021	Data entry keyers	1	T	571
+25J	439031	Desktop publishers	1	T	573
+25K	439051	Mail clerks and mail machine operators, except postal service	1	T	575
+25L	493023	Automotive service technicians and mechanics	1	T	674
+25M	439061	Office clerks, general	1	T	576
+25O	439081	Proofreaders and copy markers	1	T	578
+25P	439199	Office and administrative support workers, all other	1	T	580
+25Y	499021	Heating, air conditioning, and refrigeration mechanics and installers	1	T	687
+26L	472051	Cement masons and concrete finishers	1	T	606
+26N	472061	Construction laborers	1	T	608
+26O	472071	Paving, surfacing, and tamping equipment operators	1	T	609
+26Q	472073	Operating engineers and other construction equipment operators	1	T	611
+26S	472082	Tapers	1	T	613
+26T	472111	Electricians	1	T	614
+26W	499099	Installation, maintenance, and repair workers, all other	1	T	709
+26Y	472141	Painters, construction and maintenance	1	T	618
+27E	472181	Roofers	1	T	624
+27F	472211	Sheet metal workers	1	T	625
+27P	110000	Management occupations	0	T	2
+27Q	474011	Construction and building inspectors	1	T	635
+27U	474051	Highway maintenance workers	1	T	639
+27V	474061	Rail-track laying and maintenance equipment operators	1	T	640
+28M	514121	Welders, cutters, solderers, and brazers	1	T	747
+28O	491011	First-line supervisors of mechanics, installers, and repairers	1	T	659
+28P	130000	Business and financial operations occupations	0	T	41
+28Q	492011	Computer, automated teller, and office machine repairers	1	T	660
+28R	492022	Telecommunications equipment installers and repairers, except line installers	1	T	662
+28S	492091	Avionics technicians	1	T	663
+28V	492094	Electrical and electronics repairers, commercial and industrial equipment	1	T	666
+28X	492096	Electronic equipment installers and repairers, motor vehicles	1	T	668
+29B	493011	Aircraft mechanics and service technicians	1	T	671
+29E	493031	Bus and truck mechanics and diesel engine specialists	1	T	675
+29G	493042	Mobile heavy equipment mechanics, except engines	1	T	677
+29J	493052	Motorcycle mechanics	1	T	680
+29K	493053	Outdoor power equipment and other small engine mechanics	1	T	681
+29M	493092	Recreational vehicle service technicians	1	T	683
+29N	493093	Tire repairers and changers	1	T	684
+29P	150000	Computer and mathematical occupations	0	T	77
+29Q	499012	Control and valve installers and repairers, except mechanical door	1	T	686
+29S	499041	Industrial machinery mechanics	1	T	689
+29T	499043	Maintenance workers, machinery	1	T	690
+29U	499044	Millwrights	1	T	691
+29W	499051	Electrical power-line installers and repairers	1	T	693
+30F	499071	Maintenance and repair workers, general	1	T	700
+30J	499094	Locksmiths and safe repairers	1	T	704
+30N	499098	Helpers--installation, maintenance, and repair workers	1	T	708
+30O	511011	First-line supervisors of production and operating workers	1	T	711
+30P	170000	Architecture and engineering occupations	0	T	99
+30T	512022	Electrical and electronic equipment assemblers	1	T	714
+30Z	512092	Team assemblers	1	T	720
+31B	512099	Assemblers and fabricators, all other	1	T	721
+31C	513011	Bakers	1	T	722
+31D	513021	Butchers and meat cutters	1	T	723
+31E	513022	Meat, poultry, and fish cutters and trimmers	1	T	724
+31I	513092	Food batchmakers	1	T	727
+31J	519199	Production workers, all other	1	T	817
+31N	514021	Extruding and drawing machine setters, operators, and tenders, metal and plastic	1	T	730
+31O	514022	Forging machine setters, operators, and tenders, metal and plastic	1	T	731
+31P	190000	Life, physical, and social science occupations	0	T	136
+31R	514031	Cutting, punching, and press machine setters, operators, and tenders, metal and plastic	1	T	733
+31S	514032	Drilling and boring machine tool setters, operators, and tenders, metal and plastic	1	T	734
+31T	514033	Grinding, lapping, polishing, and buffing machine tool setters, operators, and tenders, metal and plastic	1	T	735
+31V	514035	Milling and planing machine setters, operators, and tenders, metal and plastic	1	T	737
+31W	514041	Machinists	1	T	738
+31X	514051	Metal-refining furnace operators and tenders	1	T	739
+31Y	514052	Pourers and casters, metal	1	T	740
+32C	514071	Foundry mold and coremakers	1	T	743
+32D	514072	Molding, coremaking, and casting machine setters, operators, and tenders, metal and plastic	1	T	744
+32E	514081	Multiple machine tool setters, operators, and tenders, metal and plastic	1	T	745
+32F	514111	Tool and die makers	1	T	746
+32L	514194	Tool grinders, filers, and sharpeners	1	T	752
+32O	515112	Printing press operators	1	T	755
+32P	210000	Community and social service occupations	0	T	185
+32R	516011	Laundry and dry-cleaning workers	1	T	757
+32U	516031	Sewing machine operators	1	T	759
+33B	516062	Textile cutting machine setters, operators, and tenders	1	T	765
+33I	517011	Cabinetmakers and bench carpenters	1	T	772
+33J	517021	Furniture finishers	1	T	773
+33M	517041	Sawing machine setters, operators, and tenders, wood	1	T	776
+33N	517042	Woodworking machine setters, operators, and tenders, except sawing	1	T	777
+33P	230000	Legal occupations	0	T	204
+33T	518021	Stationary engineers and boiler operators	1	T	782
+33U	518031	Water and wastewater treatment plant and system operators	1	T	783
+34D	519023	Mixing and blending machine setters, operators, and tenders	1	T	792
+34E	519031	Cutters and trimmers, hand	1	T	793
+34F	519032	Cutting and slicing machine setters, operators, and tenders	1	T	794
+34G	519041	Extruding, forming, pressing, and compacting machine setters, operators, and tenders	1	T	795
+34H	519051	Furnace, kiln, oven, drier, and kettle operators and tenders	1	T	796
+34I	519061	Inspectors, testers, sorters, samplers, and weighers	1	T	797
+34P	250000	Educational instruction and library occupations	0	T	213
+35P	270000	Arts, design, entertainment, sports, and media occupations	0	T	281
+36P	290000	Healthcare practitioners and technical occupations	0	T	323
+37P	310000	Healthcare support occupations	0	T	396
+38P	330000	Protective service occupations	0	T	415
+39P	350000	Food preparation and serving related occupations	0	T	440
+40P	370000	Building and grounds cleaning and maintenance occupations	0	T	458
+41P	390000	Personal care and service occupations	0	T	469
+42P	410000	Sales and related occupations	0	T	503
+43P	430000	Office and administrative support occupations	0	T	526
+44P	450000	Farming, fishing, and forestry occupations	0	T	581
+45P	470000	Construction and extraction occupations	0	T	596
+46P	490000	Installation, maintenance, and repair occupations	0	T	658
+47P	510000	Production occupations	0	T	710
+48P	530000	Transportation and material moving occupations	0	T	818
+57L	519111	Packaging and filling machine operators and tenders	1	T	802
+57M	519123	Painting, coating, and decorating workers	1	T	803
+57N	519124	Coating, painting, and spraying machine setters, operators, and tenders	1	T	804
+57Q	519161	Computer numerically controlled tool operators	1	T	807
+57R	519162	Computer numerically controlled tool programmers	1	T	808
+57S	519191	Adhesive bonding machine operators and tenders	1	T	809
+57T	519192	Cleaning, washing, and metal pickling equipment operators and tenders	1	T	810
+57U	519193	Cooling and freezing equipment operators and tenders	1	T	811
+57Y	519198	Helpers--production workers	1	T	816
+58B	531042	First-line supervisors of helpers, laborers, and material movers, hand	1	T	820
+58C	531043	First-line supervisors of material-moving machine and vehicle operators	1	T	821
+58L	533031	Driver/sales workers	1	T	830
+58M	533032	Heavy and tractor-trailer truck drivers	1	T	831
+58N	533033	Light truck drivers	1	T	832
+58O	533051	Bus drivers, school	1	T	833
+58P	533052	Bus drivers, transit and intercity	1	T	834
+58Q	533053	Shuttle drivers and chauffeurs	1	T	835
+59E	536021	Parking attendants	1	T	849
+59L	537021	Crane and tower operators	1	T	857
+59O	537051	Industrial truck and tractor operators	1	T	860
+59P	537061	Cleaners of vehicles and equipment	1	T	861
+59Q	537062	Laborers and freight, stock, and material movers, hand	1	T	862
+59R	537063	Machine feeders and offbearers	1	T	863
+59S	537064	Packers and packagers, hand	1	T	864
+59T	537065	Stockers and order fillers	1	T	865
+59X	537081	Refuse and recyclable material collectors	1	T	869

@@ -23,7 +23,8 @@ public class CategoryWriter implements ItemWriter<Category> {
   public void write(@NonNull Chunk<? extends Category> categories) throws Exception {
     for (Category category : categories) {
 
-      CategoryDTO dto = new CategoryDTO(category.category_text(), Integer.parseInt(category.display_level().trim()),
+      CategoryDTO dto = new CategoryDTO(Integer.parseInt(category.category_code()), category.category_text(),
+          Integer.parseInt(category.display_level().trim()),
           category.selectable());
       LOG.info("saving category {}", dto);
 

@@ -1,106 +1,106 @@
-additive_code	additive_text	display_level	selectable	sort_sequence
-000	Not additive	0	T	41
-010	Specific vocational preparation	0	T	96
-013	Prior work experience	0	T	97
-014	On-the-job training	0	T	98
-015	Choice of sitting or standing	0	T	42
-031	Driving	0	T	43
-038	Climbing structure-related ramps or stairs	0	T	44
-068	Strength	0	T	45
-086	Pace: Pause control	0	T	2
-087	Personal contacts: Verbal interactions	0	T	3
-088	Personal contacts: People skills	0	T	4
-089	Problem solving	0	T	5
-090	Interaction with general public	0	T	6
-091	Working around crowds	0	T	7
-092	Telework	0	T	8
-095	Work review: Supervising others	0	T	9
-096	Work review: Frequency of work being checked	0	T	10
-097	Work review: Presence of supervisor	0	T	11
-098	Pace: Control of workload	0	T	12
-099	Pace: Work pace	0	T	13
-A01	Low postures	0	T	46
-A12	Credentials	0	T	99
-A16	Reaching overhead	0	T	47
-A18	Reaching at or below the shoulder	0	T	48
-A20	Keyboarding	0	T	49
-A29	Pushing or pulling with hands or arms	0	T	50
-A30	Pushing or pulling with feet or legs	0	T	51
-A32	Foot or leg controls	0	T	52
-A34	Gross manipulation	0	T	53
-A36	Fine manipulation	0	T	54
-A39	Climbing work-related ramps or stairs	0	T	55
-A40	Climbing ladders, ropes, or scaffolds	0	T	56
-A43	Extreme cold	0	T	14
-A44	Extreme heat	0	T	15
-A45	Wetness	0	T	16
-A46	Humidity	0	T	17
-A47	Heavy vibrations	0	T	18
-A50	Heights	0	T	19
-A51	Proximity to moving mechanical parts	0	T	20
-A55	Speaking	0	T	57
-A56	Noise intensity level	0	T	21
-A65	Outdoors	0	T	22
-A73	Minimum education level	0	T	100
-A81	Hazardous contaminants	0	T	23
-B01	Low postures	0	T	58
-B16	Reaching overhead	0	T	59
-B18	Reaching at or below the shoulder	0	T	60
-B20	Keyboarding	0	T	61
-B29	Pushing or pulling with hands or arms	0	T	62
-B30	Pushing or pulling with feet or legs	0	T	63
-B32	Foot or leg controls	0	T	64
-B34	Gross manipulation	0	T	65
-B36	Fine manipulation	0	T	66
-B39	Climbing work-related ramps or stairs	0	T	67
-B40	Climbing ladders, ropes, or scaffolds	0	T	68
-B43	Extreme cold	0	T	24
-B44	Extreme heat	0	T	25
-B45	Wetness	0	T	26
-B46	Humidity	0	T	27
-B47	Heavy vibrations	0	T	28
-B50	Heights	0	T	29
-B51	Proximity to moving mechanical parts	0	T	30
-B55	Speaking	0	T	69
-B65	Outdoors	0	T	31
-B73	Literacy required	0	T	101
-B81	Hazardous contaminants	0	T	32
-C16	Reaching overhead with one or both hands	0	T	70
-C18	Reaching at or below the shoulder with one or both hands	0	T	71
-C29	Pushing or pulling with one or both hands or arms	0	T	72
-C30	Pushing or pulling with one or both feet or legs	0	T	73
-C32	Foot or leg controls with one or both feet or legs	0	T	74
-C34	Gross manipulation with one or both hands	0	T	75
-C36	Fine manipulation with one or both hands	0	T	76
-C50	Heights	0	T	33
-C51	Proximity to moving mechanical parts	0	T	34
-C81	Hazardous contaminants	0	T	35
-D01	Crawling	0	T	77
-D56	Noise intensity level	0	T	36
-E01	Crouching	0	T	78
-F01	Kneeling	0	T	79
-G01	Stooping	0	T	80
-H24	Lifting or carrying: Seldom	0	T	81
-H52	Peripheral vision	0	T	82
-H59	Hearing requirements: Speech in-person	0	T	83
-I24	Lifting or carrying: Occasionally	0	T	84
-I52	Near vision	0	T	85
-I59	Hearing requirements: Other remote speech	0	T	86
-J24	Lifting or carrying: Frequently	0	T	87
-J52	Far vision	0	T	88
-J59	Hearing requirements: Telephone	0	T	89
-K24	Lifting or carrying: Constantly	0	T	90
-K59	Hearing requirements: Other sounds	0	T	91
-L12	Credentials: Certification	0	T	102
-M12	Credentials: Certification	0	T	103
-N12	Credentials: License	0	T	104
-O12	Credentials: License	0	T	105
-P12	Credentials: Educational certificate	0	T	106
-Q12	Credentials: Educational certificate	0	T	107
-X50	Heights	0	T	37
-X51	Proximity to moving mechanical parts	0	T	38
-X81	Hazardous contaminants	0	T	40
-Y77	Work day	0	T	92
-Y78	Work day	0	T	93
-Z77	Percent of work day	0	T	94
-Z78	Percent of work day	0	T	95
+additive_code   additive_text   display_level   selectable      sort_sequence
+000Not additive                                                                                                                                                                                             0 T41
+010Specific vocational preparation                                                                                                                                                                          0 T96
+013Prior work experience                                                                                                                                                                                    0 T97
+014On-the-job training                                                                                                                                                                                      0 T98
+015Choice of sitting or standing                                                                                                                                                                            0 T42
+031Driving                                                                                                                                                                                                  0 T43
+038Climbing structure-related ramps or stairs                                                                                                                                                               0 T44
+068Strength                                                                                                                                                                                                 0 T45
+086Pace: Pause control                                                                                                                                                                                      0 T2
+087Personal contacts: Verbal interactions                                                                                                                                                                   0 T3
+088Personal contacts: People skills                                                                                                                                                                         0 T4
+089Problem solving                                                                                                                                                                                          0 T5
+090Interaction with general public                                                                                                                                                                          0 T6
+091Working around crowds                                                                                                                                                                                    0 T7
+092Telework                                                                                                                                                                                                 0 T8
+095Work review: Supervising others                                                                                                                                                                          0 T9
+096Work review: Frequency of work being checked                                                                                                                                                             0 T10
+097Work review: Presence of supervisor                                                                                                                                                                      0 T11
+098Pace: Control of workload                                                                                                                                                                                0 T12
+099Pace: Work pace                                                                                                                                                                                          0 T13
+A01Low postures                                                                                                                                                                                             0 T46
+A12Credentials                                                                                                                                                                                              0 T99
+A16Reaching overhead                                                                                                                                                                                        0 T47
+A18Reaching at or below the shoulder                                                                                                                                                                        0 T48
+A20Keyboarding                                                                                                                                                                                              0 T49
+A29Pushing or pulling with hands or arms                                                                                                                                                                    0 T50
+A30Pushing or pulling with feet or legs                                                                                                                                                                     0 T51
+A32Foot or leg controls                                                                                                                                                                                     0 T52
+A34Gross manipulation                                                                                                                                                                                       0 T53
+A36Fine manipulation                                                                                                                                                                                        0 T54
+A39Climbing work-related ramps or stairs                                                                                                                                                                    0 T55
+A40Climbing ladders, ropes, or scaffolds                                                                                                                                                                    0 T56
+A43Extreme cold                                                                                                                                                                                             0 T14
+A44Extreme heat                                                                                                                                                                                             0 T15
+A45Wetness                                                                                                                                                                                                  0 T16
+A46Humidity                                                                                                                                                                                                 0 T17
+A47Heavy vibrations                                                                                                                                                                                         0 T18
+A50Heights                                                                                                                                                                                                  0 T19
+A51Proximity to moving mechanical parts                                                                                                                                                                     0 T20
+A55Speaking                                                                                                                                                                                                 0 T57
+A56Noise intensity level                                                                                                                                                                                    0 T21
+A65Outdoors                                                                                                                                                                                                 0 T22
+A73Minimum education level                                                                                                                                                                                  0 T100
+A81Hazardous contaminants                                                                                                                                                                                   0 T23
+B01Low postures                                                                                                                                                                                             0 T58
+B16Reaching overhead                                                                                                                                                                                        0 T59
+B18Reaching at or below the shoulder                                                                                                                                                                        0 T60
+B20Keyboarding                                                                                                                                                                                              0 T61
+B29Pushing or pulling with hands or arms                                                                                                                                                                    0 T62
+B30Pushing or pulling with feet or legs                                                                                                                                                                     0 T63
+B32Foot or leg controls                                                                                                                                                                                     0 T64
+B34Gross manipulation                                                                                                                                                                                       0 T65
+B36Fine manipulation                                                                                                                                                                                        0 T66
+B39Climbing work-related ramps or stairs                                                                                                                                                                    0 T67
+B40Climbing ladders, ropes, or scaffolds                                                                                                                                                                    0 T68
+B43Extreme cold                                                                                                                                                                                             0 T24
+B44Extreme heat                                                                                                                                                                                             0 T25
+B45Wetness                                                                                                                                                                                                  0 T26
+B46Humidity                                                                                                                                                                                                 0 T27
+B47Heavy vibrations                                                                                                                                                                                         0 T28
+B50Heights                                                                                                                                                                                                  0 T29
+B51Proximity to moving mechanical parts                                                                                                                                                                     0 T30
+B55Speaking                                                                                                                                                                                                 0 T69
+B65Outdoors                                                                                                                                                                                                 0 T31
+B73Literacy required                                                                                                                                                                                        0 T101
+B81Hazardous contaminants                                                                                                                                                                                   0 T32
+C16Reaching overhead with one or both hands                                                                                                                                                                 0 T70
+C18Reaching at or below the shoulder with one or both hands                                                                                                                                                 0 T71
+C29Pushing or pulling with one or both hands or arms                                                                                                                                                        0 T72
+C30Pushing or pulling with one or both feet or legs                                                                                                                                                         0 T73
+C32Foot or leg controls with one or both feet or legs                                                                                                                                                       0 T74
+C34Gross manipulation with one or both hands                                                                                                                                                                0 T75
+C36Fine manipulation with one or both hands                                                                                                                                                                 0 T76
+C50Heights                                                                                                                                                                                                  0 T33
+C51Proximity to moving mechanical parts                                                                                                                                                                     0 T34
+C81Hazardous contaminants                                                                                                                                                                                   0 T35
+D01Crawling                                                                                                                                                                                                 0 T77
+D56Noise intensity level                                                                                                                                                                                    0 T36
+E01Crouching                                                                                                                                                                                                0 T78
+F01Kneeling                                                                                                                                                                                                 0 T79
+G01Stooping                                                                                                                                                                                                 0 T80
+H24Lifting or carrying: Seldom                                                                                                                                                                              0 T81
+H52Peripheral vision                                                                                                                                                                                        0 T82
+H59Hearing requirements: Speech in-person                                                                                                                                                                   0 T83
+I24Lifting or carrying: Occasionally                                                                                                                                                                        0 T84
+I52Near vision                                                                                                                                                                                              0 T85
+I59Hearing requirements: Other remote speech                                                                                                                                                                0 T86
+J24Lifting or carrying: Frequently                                                                                                                                                                          0 T87
+J52Far vision                                                                                                                                                                                               0 T88
+J59Hearing requirements: Telephone                                                                                                                                                                          0 T89
+K24Lifting or carrying: Constantly                                                                                                                                                                          0 T90
+K59Hearing requirements: Other sounds                                                                                                                                                                       0 T91
+L12Credentials: Certification                                                                                                                                                                               0 T102
+M12Credentials: Certification                                                                                                                                                                               0 T103
+N12Credentials: License                                                                                                                                                                                     0 T104
+O12Credentials: License                                                                                                                                                                                     0 T105
+P12Credentials: Educational certificate                                                                                                                                                                     0 T106
+Q12Credentials: Educational certificate                                                                                                                                                                     0 T107
+X50Heights                                                                                                                                                                                                  0 T37
+X51Proximity to moving mechanical parts                                                                                                                                                                     0 T38
+X81Hazardous contaminants                                                                                                                                                                                   0 T40
+Y77Work day                                                                                                                                                                                                 0 T92
+Y78Work day                                                                                                                                                                                                 0 T93
+Z77Percent of work day                                                                                                                                                                                      0 T94
+Z78Percent of work day                                                                                                                                                                                      0 T95
